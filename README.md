@@ -38,7 +38,7 @@ All **data modeling** and **transformations** were done in **Power Query** and *
 
 - **Power BI** – Data modeling, visualization, and DAX calculations  
 - **Power Query** – ETL workflows and data transformation  
-- **SQL** – Cohort retention analysis and advanced customer segmentation  
+- **SQL** – Cohort retention analysis
 - **Power BI Relationship Diagram** – Optimized star schema design  
 - **Business-focused report layout** for intuitive navigation and storytelling  
 
