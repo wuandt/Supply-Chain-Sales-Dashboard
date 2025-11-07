@@ -1,47 +1,46 @@
-# Supply Chain Dashboard 📦📊
+# 🛒 Supply Chain & Sales Performance Dashboard
 
-## 📌 Overview
-Dự án này là một dashboard được xây dựng bằng Power BI nhằm phân tích hiệu suất chuỗi cung ứng từ nhiều góc độ như doanh thu, lợi nhuận, đơn hàng, thời gian giao hàng và tỷ lệ hoàn trả. Mục tiêu là hỗ trợ việc ra quyết định trong quản lý logistics và tối ưu vận hành.
+A **Power BI dashboard** designed to visualize and monitor **key sales and supply chain performance metrics** for a global retail company.  
+The report helps stakeholders track business operations, product performance, and customer behavior—supporting data-driven decision-making in sales and logistics management.
 
-## 🧩 Dashboard Includes
-Dashboard gồm **3 trang chính**:
+## 📊 Key Features
 
-### 1. **Overview**
-- Tổng quan doanh thu (Revenue), lợi nhuận (Profit), số đơn hàng và thời gian giao hàng trung bình.
-- Biểu đồ xu hướng doanh thu & lợi nhuận theo tháng.
-- Doanh thu phân theo **phân khúc khách hàng** và **loại sản phẩm**.
-- Bản đồ doanh thu theo **bang** tại Hoa Kỳ.
-- Biểu đồ số ngày giao hàng trung bình theo tháng.
+- **Total sales and profit over time**  
+- **Supply chain performance by region**  
+- **Sales performance by region and category**  
+- **Cohort retention analysis using SQL**  
+- **Interactive filters for drill-down analysis**  
+- **Visual storytelling with retail KPIs**
+- 
+## 🧹 Data Preparation & Modeling
 
-### 2. **Delivery & Return**
-- Tỷ lệ giao hàng trễ và tỷ lệ hoàn trả theo từng **phương thức vận chuyển** (Ship Mode).
-- Phân tích tác động của việc giao hàng trễ đến tỷ lệ hoàn trả.
-- Biểu đồ số ngày giao hàng trung bình theo **vùng địa lý**.
-- Biểu đồ Sankey phân tích mối quan hệ giữa Ship Mode → Category → Sub-category.
+The dashboard was built from a **single raw CSV file**, which was **transformed into a star schema model** consisting of six tables:
 
-### 3. **Sales Performance**
-- Tỷ suất lợi nhuận theo từng **dòng sản phẩm** và **năm**.
-- Doanh thu & lợi nhuận theo **customer segment**.
-- Top khách hàng mang lại doanh thu cao nhất.
-- Giá trị đơn hàng trung bình và số lượng khách hàng.
+- **Fact_Orders** – Central fact table containing order details (sales, profit, quantity, discount, etc.)  
+- **Dim_Customer** – Customer demographics and membership information  
+- **Dim_Product** – Product catalog including name, category  
+- **Dim_Ship_Mode** – Shipping methods and delivery details  
+- **Dim_Geography** – Region and country information
+- **Dim_Date** – Calendar table containing date, month, quarter, and year attributes for time-based analysis 
 
-## 🛠️ Technologies Used
-- **Power BI Desktop**
-- **Excel (.xlsx)** – nguồn dữ liệu đầu vào
-- **DAX** – để tính toán các chỉ số nâng cao như Profit Margin, Return Rate, AVG Delivery Days
-## 🧪 Cách sử dụng / Hướng dẫn cài đặt Power BI
+All **data modeling** and **transformations** were done in **Power Query** and **Power BI**, ensuring:
 
-### 🔧 Yêu cầu:  
-Cài đặt phần mềm **Power BI Desktop** (miễn phí)
+- Clean and standardized data formats  
+- Proper key relationships between dimensions and fact tables  
+- Accurate DAX measures for KPIs such as total sales, profit, and delivery time  
+- Structured star schema for efficient analysis and performance  
 
----
+## 📁 Tools & Technologies
 
-### ✅ Các bước:
+- **Power BI** – Data modeling, visualization, and DAX calculations  
+- **Power Query** – ETL workflows and data transformation  
+- **SQL** – Cohort retention analysis and advanced customer segmentation  
+- **Power BI Relationship Diagram** – Optimized star schema design  
+- **Business-focused report layout** for intuitive navigation and storytelling  
 
-1. **Tải Power BI Desktop** từ:
-   - 💻 [Microsoft Store](https://apps.microsoft.com/store/detail/power-bi-desktop/9NTXR16HNW1T)
-   - 🌐 Hoặc [Trang chính thức của Microsoft](https://powerbi.microsoft.com/desktop)
+## 🧠 Key Insights
 
-2. **Tải file `Supply chain.pbix`** từ repository GitHub này.
-
-3. **Mở file `.pbix` bằng Power BI Desktop**
+- The **overall supply chain performance** is influenced by **long delivery times in the Central region** and **high return rates in the West region**.  
+- **Technology** remains the **main revenue driver**, but requires **stronger quality control and after-sales service** to reduce returns.  
+- **Cohort retention analysis** indicates that the **first three months after a customer’s initial purchase** are the most critical, showing the lowest retention rates.  
+- **Optimizing shipping modes** and **enhancing early-stage customer experience** can significantly **increase profitability**, **reduce returns**, and **improve operational efficiency**.
