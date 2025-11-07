@@ -3,6 +3,10 @@
 A **Power BI dashboard** designed to visualize and monitor **key sales and supply chain performance metrics** for a global retail company.  
 The report helps stakeholders track business operations, product performance, and customer behavior—supporting data-driven decision-making in sales and logistics management.
 
+## 📈 Dashboard Preview
+
+![Dashboard Preview](https://drive.google.com/file/d/1o5-vCvvzL6vB3Zq0UCpgW8voKKxKjzXz/view?usp=sharing)
+
 ## 📊 Key Features
 
 - **Total sales and profit over time**  
